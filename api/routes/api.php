@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeatherApiController;
 
@@ -13,6 +14,13 @@ use App\Http\Controllers\WeatherApiController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'all systems are a go',
+        'users' => User::all(),
+    ]);
+});
 
 Route::prefix('api')->group(function () {
     Route::get('user-weather', [WeatherApiController::class, 'getWeather']);
