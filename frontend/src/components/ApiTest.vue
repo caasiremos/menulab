@@ -259,15 +259,98 @@ const gettingUser = (user: any) => {
                   <tr>
                     <td class="h-px w-72 whitespace-nowrap">
                       <div class="px-6 py-3">
-                        <span class="block text-sm font-semibold text-gray-800">Timezone</span>
+                        <span class="block text-sm font-semibold text-gray-800">Visibility</span>
                       </div>
                     </td>
                     <td class="h-px w-px whitespace-nowrap">
                       <div class="px-6 py-1.5">
-                        <span class="block text-sm text-gray-500">{{ selectedUser.user }}</span>
+                        <span class="block text-sm text-gray-500">{{ selectedUser.weatherData.current.visibility }}</span>
                       </div>
                     </td>
-                    {{ selectedUser.user }}
+                  </tr>
+                  <tr>
+                    <td class="h-px w-72 whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="block text-sm font-semibold text-gray-800">Timezone Offset</span>
+                      </div>
+                    </td>
+                    <td class="h-px w-px whitespace-nowrap">
+                      <div class="px-6 py-1.5">
+                        <span class="block text-sm text-gray-500">{{ selectedUser.weatherData.timezone_offset }}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h-px w-72 whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="block text-sm font-semibold text-gray-800">Humidity</span>
+                      </div>
+                    </td>
+                    <td class="h-px w-px whitespace-nowrap">
+                      <div class="px-6 py-1.5">
+                        <span class="block text-sm text-gray-500">{{ selectedUser.weatherData.current.humidity }}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h-px w-72 whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="block text-sm font-semibold text-gray-800">Due Point</span>
+                      </div>
+                    </td>
+                    <td class="h-px w-px whitespace-nowrap">
+                      <div class="px-6 py-1.5">
+                        <span class="block text-sm text-gray-500">{{ selectedUser.weatherData.current.dew_point }}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h-px w-72 whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="block text-sm font-semibold text-gray-800">Wind Speed</span>
+                      </div>
+                    </td>
+                    <td class="h-px w-px whitespace-nowrap">
+                      <div class="px-6 py-1.5">
+                        <span class="block text-sm text-gray-500">{{ selectedUser.weatherData.current.wind_speed }}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h-px w-72 whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="block text-sm font-semibold text-gray-800">Temperature</span>
+                      </div>
+                    </td>
+                    <td class="h-px w-px whitespace-nowrap">
+                      <div class="px-6 py-1.5">
+                        <span class="block text-sm text-gray-500">{{ selectedUser.weatherData.current.temp }}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h-px w-72 whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="block text-sm font-semibold text-gray-800">Weather</span>
+                      </div>
+                    </td>
+                    <td class="h-px w-px whitespace-nowrap">
+                      <div class="px-6 py-1.5">
+                        <span class="block text-sm text-gray-500">{{selectedUser.weatherData.current.weather[0].main }}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h-px w-72 whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="block text-sm font-semibold text-gray-800">Description</span>
+                      </div>
+                    </td>
+                    <td class="h-px w-px whitespace-nowrap">
+                      <div class="px-6 py-1.5">
+                        <span class="block text-sm text-gray-500">{{ selectedUser.weatherData.current.weather[0].description }}</span>
+                      </div>
+                    </td>
                   </tr>
                   </tbody>
                 </table>
